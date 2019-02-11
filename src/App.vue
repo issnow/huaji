@@ -1,25 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <!-- 头部 -->
+    <m-header></m-header>
+
+    <!-- 导航 -->
+    <tab></tab>
+
+    <!-- keep-alive缓存,不用走created等生命周期 -->
+    <keep-alive>
+      <!-- 路由 -->
+      <router-view></router-view>
+    </keep-alive>
+
+    <!-- 播放器 -->
+    <player ></player>
   </div>
 </template>
-<style lang="stylus">
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
 
-#nav
-  padding 30px
-  a
-    font-weight bold
-    color #2c3e50
-    &.router-link-exact-active
-      color #42b983
+<script>
+  import MHeader from 'components/m-header/m-header.vue';
+  import Tab from 'components/tab/tab.vue';
+  import Player from 'components/player/player.vue';
+  export default {
+    components: {
+      MHeader,
+      Tab,
+      Player
+    }
+  }
+</script>
+
+<style scoped lang='stylus'>
+  // variable.styl的后缀名可省略
+  // 组建内引入css样式使用 @import
+  @import '~common/stylus/variable'
+  #app
+    color $color-theme
+    touch-action none
 </style>
