@@ -1,3 +1,9 @@
+/*
+ * @Author: guocheng 
+ * @Date: 2019-05-12 23:14:45 
+ * @Last Modified by:   guocheng 
+ * @Last Modified time: 2019-05-12 23:14:45 
+ */
 <template>
   <div class="recommend" ref="recommend">
     <scroll ref='scroll' class="recommend-content" :data='discList'>

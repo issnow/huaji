@@ -1,3 +1,9 @@
+/*
+ * @Author: guocheng 
+ * @Date: 2019-05-12 23:14:22 
+ * @Last Modified by:   guocheng 
+ * @Last Modified time: 2019-05-12 23:14:22 
+ */
 <template>
   <div class="rank" ref='rank'>
     <scroll :data='topList' class="toplist" ref='scroll'>
